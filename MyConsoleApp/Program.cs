@@ -8,7 +8,6 @@ foreach (string w in result)
 	Console.WriteLine(w);
 }
 
-return;
 
 List<string> FilterString(string[] strings, Func<string, bool> predicate)
 {
