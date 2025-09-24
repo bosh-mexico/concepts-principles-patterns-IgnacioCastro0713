@@ -1,8 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 string[] words = ["Bosch", "Mexico", "Mango", "Mark", "Blr", "Clean code"];
 
-var result = FilterString(words, word => word.StartsWith("M", StringComparison.OrdinalIgnoreCase));
+bool FilterWithM(string word) => word.StartsWith("M", StringComparison.OrdinalIgnoreCase);
 
+var result = FilterString(words, FilterWithM);
 
 foreach (string w in result)
 {
