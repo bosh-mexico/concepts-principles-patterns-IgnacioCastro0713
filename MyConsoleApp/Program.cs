@@ -12,5 +12,14 @@ return;
 
 List<string> FilterString(string[] strings, Func<string, bool> predicate)
 {
-	return strings.Where(predicate).ToList();
+	var filterString = new List<string>();
+	foreach (var s in strings)
+	{
+		if (predicate(s))
+		{
+			filterString.Add(s);
+		}
+	}
+
+	return filterString;
 }
