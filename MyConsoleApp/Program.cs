@@ -2,6 +2,7 @@
 string[] words = ["Bosch", "Mexico", "Mango", "Mark", "Blr", "Clean code"];
 
 var result = FilterString(words, word => word.StartsWith("M", StringComparison.OrdinalIgnoreCase));
+ result = FilterString(words, word => word.StartsWith("B", StringComparison.OrdinalIgnoreCase));
 
 
 foreach (string w in result)
